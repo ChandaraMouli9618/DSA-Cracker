@@ -9,9 +9,10 @@ Author     : Chandra Mouli
 class Solution {
     
     public static ArrayList<String> findPath(int[][] m, int n) {
+        // Maze is a square with side length 'n'.
         ArrayList<String> pathList = new ArrayList<>();
       
-        // If first and last blocks are blocked return empty pathList.
+        // If first or last blocks are blocked return empty pathList.
         if(m[0][0] == 0 || m[n-1][n-1] == 0) return pathList;
         getPaths(0, 0, m, n-1, "", pathList);
       
